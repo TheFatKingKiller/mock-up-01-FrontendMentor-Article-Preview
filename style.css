@@ -1,0 +1,92 @@
+body {
+    font-family: 'Manrope',
+    sans-serif;
+    font-size: 13px;
+    background-color: #edf2f8;
+    color: #47556f;
+}
+
+h1{
+    font-weight: 700;
+}
+
+h6 {
+    font-size: 0.87em;
+    margin-block-start: 5px;
+    margin-block-end: 4px;
+    margin-inline-start: 14px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+span.date{
+    color: #bbbec5;
+}
+
+.wrapper{
+    min-height: 250px;
+    width: 700px;
+    margin: auto;
+    margin-top: 250px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.wrapper img{
+    width: 250px;
+    height: 250px;
+}
+
+.profile-wrapper, .profile{
+    display: flex;
+}
+
+/* .profile p{
+    margin: 0;
+    margin-left: 18px;
+} */
+
+
+.profile img{
+    height: 43px;
+    width: 43px;
+    border-radius: 50%;
+}
+
+
+.share {
+    position: relative;
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    display: block;
+    margin: auto;
+}
+.share svg{
+    position: absolute;
+    top:calc(50% - 8px);
+    left:calc(50% - 6px);
+}
+
+article > *{
+    margin-top: 24px;
+
+}
+
+article{
+    padding: 0 42px 0 42px;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    width: 700px;
+    align-content: center;
+}
+.attribution p{
+    text-align: center;
+}
