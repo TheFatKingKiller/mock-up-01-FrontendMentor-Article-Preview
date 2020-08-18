@@ -10,10 +10,15 @@ body{
   flex-direction: column;
   justify-content: center;
 
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  background-color: #edf2f8;
+  color: #47556f;
+  font-weight: 500;
 }
 
-h3{
-  font-weight: 500;
+h1{
+  font-weight: 700;
 }
 
 .flex-container{
@@ -26,17 +31,21 @@ h3{
   height: 250px;
   width: 700px;
   margin: auto;
-  padding: 0;
   border-radius: 10px;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .card img{
   height: 250px;
   width: 250px;
 }
-.text-content > *{
-  margin: 12px 19px;
+/* .text-content > *{
+  margin: 24px 42px;
+} */
+
+.text-content{
+    padding: 24px 42px;
 }
 
 /* Contact info and share button position */
