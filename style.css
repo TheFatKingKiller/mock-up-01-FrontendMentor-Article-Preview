@@ -44,13 +44,16 @@ h1{
   width: 700px;
   margin: auto;
   border-radius: 10px;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: #fff;
 }
 
 .card img{
   height: 250px;
   width: 250px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
 }
 /* .text-content > *{
   margin: 24px 42px;
@@ -94,7 +97,7 @@ h6{
   margin-top: 5px;
 }
 
-.person svg{
+.person-share > svg{
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -103,14 +106,55 @@ h6{
   left: 0;
   right: 0;
   margin: auto;
-  text-align: center;
 }
 
-.box{
+.share-box{
   position: absolute;
-  content: "test";
-  background-color:yellow;
-  height: 24px;
-  width: 24px;
-  top: -24px;
+  background-color:#49556B;
+  border-radius: 10px;
+  height: 38px;
+  width: 168px;
+  top: -48px;
+  left: -68px;
+
+  /* center horizonally and vertically the icons and text */
+  justify-content: center;
+  align-items: center;
+
+}
+.share-box:after{
+  content: " ";
+  position: absolute;
+  height: 0;
+  width: 0;
+  
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #49556B;
+
+  left: calc(50% - 8px);
+  bottom: -8px;
+}
+
+ul{
+  /* because this is now a flexbox container, i can do this.. */
+  align-items: center;
+}
+
+li{
+  font-size: 12px;
+  font-weight: 300;
+  color:hsl(210, 46%, 95%);
+  display: block;
+  float: left;
+  margin-left: 10px;
+}
+.share-box li:first-child{
+  color:hsl(212, 23%, 69%);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.hidden {
+  display:hidden;
 }
