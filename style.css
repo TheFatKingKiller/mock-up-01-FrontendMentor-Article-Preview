@@ -13,12 +13,24 @@ body{
   font-family: 'Manrope', sans-serif;
   font-size: 13px;
   background-color: #edf2f8;
-  color: #47556f;
+  color: hsl(217, 19%, 35%);
   font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1.5em;
 }
 
 h1{
   font-weight: 700;
+  margin-top: 0;
+  font-size: 1.5em;
 }
 
 .flex-container{
@@ -66,7 +78,7 @@ h1{
 }
 
 h6{
-  margin:5px 0 5px 0; 
+  font-size: 0.87em;
 }
 .date{
   font-weight: normal;
@@ -75,9 +87,9 @@ h6{
 /* aligning and stylign share button */
 .person-share {
   position: relative;
-  background-color: #000;
-  height: 26px;
-  width: 26px;
+  background-color: hsl(210, 46%, 95%);
+  height: 32px;
+  width: 32px;
   border-radius: 50%;
   margin-top: 5px;
 }
@@ -94,3 +106,11 @@ h6{
   text-align: center;
 }
 
+.box{
+  position: absolute;
+  content: "test";
+  background-color:yellow;
+  height: 24px;
+  width: 24px;
+  top: -24px;
+}
