@@ -40,8 +40,8 @@ h1{
 
 /* overall card layout */
 .card{
-  max-height: 250px;
-  max-width: 700px;
+  height: 250px;
+  width: 700px;
   margin: auto;
   border-radius: 10px;
   /* overflow: hidden; */
@@ -88,7 +88,10 @@ h6{
 }
 
 /* aligning and stylign share button */
-.person-share {
+.share-grid{
+  position: relative;
+}
+div.person-share {
   position: relative;
   background-color: hsl(210, 46%, 95%);
   height: 32px;
@@ -127,7 +130,7 @@ li{
   text-transform: uppercase;
 }
 
-.hidden {
+.share-box {
   display: none;
 }
 
@@ -142,8 +145,12 @@ button,
   cursor: pointer;
 }
 
+.hidden{
+  display: none;
+}
+
   @media screen and (min-width: 375px){
-    .share-box:after {
+    .show-share .share-box:after {
       content: " ";
       position: absolute;
       height: 0;
@@ -157,19 +164,21 @@ button,
       bottom: -8px;
     }
 
-    .share-box {
+    .show-share .share-box {
+      display: flex;
       position: absolute;
       background-color: #49556B;
       border-radius: 10px;
       height: 38px;
       width: 168px;
-      /* bottom: 48px; */
+      bottom: 48px;
       right: -68px;
 
       /* center horizonally and vertically the icons and text */
       justify-content: center;
       align-items: center;
     }
+
   }
 
   @media screen and (max-width: 375px) {
@@ -179,6 +188,7 @@ button,
     
     .card {
       height: auto;
+      width: 100%;
       display: table;
     }
 
@@ -190,7 +200,30 @@ button,
     }
 
 
-    .attribution{
-      display: none;
+    /* display before clicking show share items */
+    .share-grid{
+      position: relative;
+      height: auto;
+      width: auto;
+      background-color: transparent;
+    }
+
+    /* display after clicking share items */
+    .show-share .share-box{
+      display:flex;
+      justify-content: space-around;
+      width: 250px;
+    }
+    .show-share.share-grid {
+      position: fixed;
+			display: flex;
+      background-color: #49556B;
+      height: 64px;
+      width: 100vw;
+/* center horizonally and vertically the icons and text */
+      justify-content: space-between;
+      align-items: center;
+      bottom: 0;
+      left: 0;
     }
   }
