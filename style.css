@@ -1,0 +1,241 @@
+body, html{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: Manrope;
+  font-size: 13px;
+}
+body{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  background-color: #edf2f8;
+  color: hsl(217, 19%, 35%);
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1.5em;
+}
+
+h1{
+  font-weight: 700;
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.flex-container{
+  display: flex;
+}
+
+
+/* overall card layout */
+.card{
+  height: 250px;
+  width: 700px;
+  margin: auto;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  background-color: #fff;
+}
+
+.card img{
+  height: 250px;
+  width: 250px;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+
+}
+/* .text-content > *{
+  margin: 24px 42px;
+} */
+
+.text-content{
+    padding: 24px 42px;
+}
+
+/* Contact info and share button position */
+/* .person{
+} */
+
+.person img{
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+}
+
+.person-info{
+  margin-left: 10px;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+h6{
+  font-size: 0.87em;
+}
+.date{
+  font-weight: normal;
+}
+
+/* aligning and stylign share button */
+.share-grid{
+  position: relative;
+}
+div.person-share {
+  position: relative;
+  background-color: hsl(210, 46%, 95%);
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+.person-share > svg{
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  fill: rgb(110, 128, 152);
+}
+
+ul{
+  /* because this is now a flexbox container, i can do this.. */
+  align-items: center;
+}
+
+li{
+  font-size: 12px;
+  font-weight: 300;
+  color:hsl(210, 46%, 95%);
+  display: block;
+  float: left;
+  margin-left: 10px;
+}
+.share-box li:first-child{
+  color:hsl(212, 23%, 69%);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.share-box {
+  display: none;
+}
+
+/* give clickable elements cursor */
+a[href],
+input[type='submit'],
+input[type='image'],
+label[for],
+select,
+button,
+.pointer {
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
+}
+
+  @media screen and (min-width: 375px){
+    .show-share .share-box:after {
+      content: " ";
+      position: absolute;
+      height: 0;
+      width: 0;
+
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #49556B;
+
+      left: calc(50% - 8px);
+      bottom: -8px;
+    }
+
+    .show-share .share-box {
+      display: flex;
+      position: absolute;
+      background-color: #49556B;
+      border-radius: 10px;
+      height: 38px;
+      width: 168px;
+      bottom: 48px;
+      right: -68px;
+
+      /* center horizonally and vertically the icons and text */
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+
+  @media screen and (max-width: 375px) {
+    body{
+      display: initial;
+    }
+    
+    .card {
+      height: auto;
+      width: 100%;
+      display: table;
+    }
+
+    .card > img {
+      width: 100%;
+      height: auto;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+
+    /* display before clicking show share items */
+    .share-grid{
+      position: relative;
+      height: auto;
+      width: auto;
+      background-color: transparent;
+    }
+
+    /* display after clicking share items */
+    .show-share .share-box{
+      display:flex;
+      justify-content: space-around;
+      width: 250px;
+    }
+    .show-share.share-grid {
+      position: fixed;
+			display: flex;
+      background-color: #49556B;
+      height: 64px;
+      width: 100vw;
+/* center horizonally and vertically the icons and text */
+      justify-content: space-between;
+      align-items: center;
+      bottom: 0;
+      left: 0;
+    }
+    .show-share li{
+      margin: 0 10px;
+    }
+    .show-share .person-share{
+      background-color: rgb(110, 128, 152);
+      margin-right: 42px;
+    }
+    .show-share .person-share svg {
+      fill: #fff;
+    }
+
+  }
