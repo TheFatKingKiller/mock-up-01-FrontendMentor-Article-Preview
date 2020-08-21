@@ -5,7 +5,7 @@ let width = document.documentElement.clientWidth;
 
 shareBtn.addEventListener("click", ()=>{
     shareBubble.classList.toggle("show-share");
-    if(width < 375){
+    if(width < 421){
         document.querySelector(".person img").classList.toggle("hidden");
         document.querySelector(".person-text").classList.toggle("hidden");
     }

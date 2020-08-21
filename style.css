@@ -150,7 +150,7 @@ button,
   display: none;
 }
 
-  @media screen and (min-width: 375px){
+  @media screen and (min-width: 421px){
     .show-share .share-box:after {
       content: " ";
       position: absolute;
@@ -182,7 +182,7 @@ button,
 
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 420px) {
     body{
       display: initial;
     }
